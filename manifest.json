@@ -1,0 +1,55 @@
+{
+    "name": "Ticket Decision Assistant - Mv2 Compatible",
+    "description": "Helps ticket resellers work with their partners to determine whether or not they should buy a ticket.",
+    "version": "2.0.0",
+    "manifest_version": 2,
+    "background": {
+        "service_worker": "background.js",
+        "run_at": "document_start"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://checkout.ticketmaster.com/*", "*://*.ticketmaster.com/checkout/*", "*://checkout.livenation.com/*", "*://checkout.ticketmaster.ca/*", "*://*.ticketmaster.ca/checkout/*"],
+        "js": [
+          "jquery.min.js",
+          "jquery-ui.min.js",
+          "main/all_files.js"
+        ],
+        "css": [
+        ],
+        "run_at": "document_start"
+      },
+      {
+        "matches": ["*://checkout.ticketmaster.com/*", "*://*.ticketmaster.com/checkout/*", "*://checkout.livenation.com/*", "*://checkout.ticketmaster.ca/*", "*://*.ticketmaster.ca/checkout/*"],
+        "js": [
+          "sweetalert.js"
+        ],
+        "css": [
+          "animate.min.css",
+          "sweetalert.css",
+          "three-dots.min.css"
+        ],
+        "all_frames": true
+      }
+  ],
+    "permissions": [
+      "*://checkout.ticketmaster.com/*", "*://*.ticketmaster.com/checkout/*", "*://checkout.livenation.com/*", "*://checkout.ticketmaster.ca/*", "*://*.ticketmaster.ca/checkout/*",
+      "storage",
+      "tabs",
+      "activeTab"
+    ],
+    "web_accessible_resources": [
+      "images/*", "collectDataFromWindowVars.js", "3dots.html"
+    ],
+    "incognito": "spanning",
+    "icons": {
+      "16": "./images/ticket-assistant-logo-png-32.png",
+      "32": "./images/ticket-assistant-logo-png-32.png",
+      "48": "./images/ticket-assistant-logo-png-32.png",
+      "128": "./images/ticket-assistant-logo-png-32.png"
+    },
+    "browser_action": {
+      "default_icon": "/images/ticket-assistant-logo-png-32.png",
+      "default_popup": "popup.html"
+    }
+  }

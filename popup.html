@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Decision Assitant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="three-dots.min.css">
+
+    <script src="script.js"></script>
+    <script src="sweetalert.js"></script>
+    
+    <link rel="stylesheet" href="sweetalert.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        text-shadow: #787272a6 1px 1px 1px !important;
+        font-family: "Averta","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+      }
+
+      .three-dots-container {
+        margin-left: 140px;
+        margin-top: 43px !important;
+      }
+    </style>
+                    
+<style>
+  .confirm-button {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-direction: reverse;
+    box-sizing: border-box;
+    font: "Averta","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    overflow: visible;
+    -webkit-appearance: button;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    min-height: 38px;
+    line-height: 38px;
+    /* float: right; */
+    width: unset;
+    max-height: 36px;
+    padding: 0 12px;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: #026cdf;
+    margin-left: 0px;
+    transition: 0.3s ease;
+  }
+
+  .confirm-button:hover {
+    background-color: #074b94;
+  }
+
+  .confirm-button:active {
+    background-color: #2c75c3;
+  }
+</style>
+
+      <style>
+        .swal-title-33 {
+          /* max-width: 33% !important; */
+          overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+      @import url(https://fonts.googleapis.com/css?family=Dosis:700);
+
+      :root {
+        --slider_color: #0000ff;
+      }
+
+      body {
+        font-family: "Dosis", Helvetica, Arial, sans-serif;
+        background: #ecf0f1;
+        color: #34495e;
+        text-shadow: white 1px 1px 1px;
+      }
+      .value {
+        border-bottom: 4px dashed #bdc3c7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 10em;
+        width: 300px;
+        height: 100px;
+        line-height: 60px;
+        margin: 40px auto;
+        letter-spacing: -0.07em;
+        text-shadow: white 2px 2px 2px;
+      }
+      input[type="range"] {
+        display: block;
+        -webkit-appearance: none;
+        background-color: #bdc3c7;
+        width: 300px;
+        height: 5px;
+        border-radius: 5px;
+        margin: 0 auto;
+        outline: 0;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: var(--slider_color);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+      }
+      ​ input[type="range"]::-webkit-slider-thumb:hover {
+        background-color: white;
+        border: 2px solid var(--slider_color);
+      }
+      input[type="range"]::-webkit-slider-thumb:active {
+        transform: scale(1.6);
+      }
+      
+      </style>
+</head>
+<body>
+  <div class="outsize-panel">
+      <div class="outsize-panel-header" style="background: linear-gradient(0deg, #3358f4 0%, #1d8cf8 100%)">
+          <div class="outsize-panel-logo">
+            <h1 style='text-shadow: none !important; font-family: "Averta","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 15px; color:white;'>Ticket&nbsp;Decision&nbsp;Assistant</h1>
+          </div>
+          <img src="images/ticket-assistant-logo-svg.svg" alt="Extractor App Logo" style="width:16%; margin-right: 16px">
+          <a href="#" class="outsize-panel-settings" id="homeBtn" style="width:6%;" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M541 229.16l-232.85-190a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"/></svg>             </a>
+      </div>
+      <!-- /.outsize-panel-header -->
+      <div class="outsize-panel-body" id="home" style="min-height: 150px !important;">
+
+        <!-- Pre activation -->
+        <div class="set-name" id="pre" style="display: none;">
+          <div class="outsize-panel-caption">
+            <div class="outsize-panel-title" style="text-shadow: none !important;">Enter Activation Code:</div>
+        </div>
+        <div class="outsize-panel-content" style="margin-top:15px;">
+          <div class="outsize-panel-research">
+              <input type="text" class="outsize-panel-null-add-color-input" style="cursor: text !important;" id="activation_code">
+            </div>
+          </div>
+          <button class="confirm-button" id="confirm-code">Confirm</button>
+        </div>
+
+        <!-- Post activation -->
+
+        <div class="three-dots-container" id="loader">
+          <div class="dot-flashing" style="margin-left: 20px; margin-top: 5px;"></div>
+        </div>
+
+        <div class="set-name animate__animated  animate__fadeIn" id="post" style="display: none;">
+          <div class="outsize-panel-caption">
+            <div class="outsize-panel-title" style="text-shadow: none !important;" id="account_active" style="display: none;">
+              <h3>
+                Your account is set up! You are registered as: <u><span id="username"></span></u>
+              </h3>
+              <br>
+              <h4>
+                Activation Status: <u><span id="activation_status"></span></u>
+              </h4>
+            </div>
+            <div class="outsize-panel-title" style="text-shadow: none !important; display: none;" id="account_inactive_security">
+              <h3>
+                Your account has been deactivated. For security reasons, we have disabled your account due to unusual activity. Please request your admin delete your account from the TDA portal, create a new one for you, and then reinstall the extension and input a new activation code.
+              </h3>
+            </div>
+            <div class="outsize-panel-title" style="text-shadow: none !important; display: none;" id="account_removed">
+              <h3>
+                Your account has been deactivated. Please contact your admin if you believe this to be a mistake.
+              </h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- /.outsize-panel-body -->
+      <!-- <div class="outsize-panel-footer" style="height: 80px;">
+          <div class="outsize-panel-info" style="text-shadow: none !important; font-size: 12px;">
+            Need any help? Want to report an issue? Please send us a message at <a href="https://outsize.io/contact" target="_blank">Outsize.io</a>
+          </div>
+          <br>
+      </div> -->
+      <!-- /.outsize-panel-footer -->
+  </div>
+  <!-- /.outsize-panel -->
+
+  <style>
+    .confirm-button {
+      width: 120px !important;
+      border-radius: 20px !important;
+    }
+
+    input {
+      font-size: 15px !important;
+    }
+  </style>
+</body>
+</html>
