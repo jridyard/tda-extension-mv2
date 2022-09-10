@@ -1,7 +1,7 @@
 {
-    "name": "Ticket Decision Assistant - Mv2 Compatible",
-    "description": "Helps ticket resellers work with their partners to determine whether or not they should buy a ticket.",
-    "version": "2.0.1",
+    "name": "Ticket Decision Assistant - Mv2",
+    "description": "TDA Helps ticket resellers work with their pullers to determine whether or not they should buy a ticket.",
+    "version": "2.0.7",
     "manifest_version": 2,
     "background": {
         "service_worker": "background.js",
