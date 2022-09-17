@@ -1,7 +1,7 @@
 {
     "name": "Ticket Decision Assistant - Mv2",
-    "description": "TDA Helps ticket resellers work with their pullers to determine whether or not they should buy a ticket.",
-    "version": "2.0.7",
+    "description": "TDA helps ticket resellers work with their pullers to determine whether or not they should buy a ticket.",
+    "version": "2.0.8",
     "manifest_version": 2,
     "background": {
         "service_worker": "background.js",
@@ -30,10 +30,23 @@
           "three-dots.min.css"
         ],
         "all_frames": true
+      },
+      {
+        "matches": ["https://discord.com/*"],
+        "js": [
+          "jquery.min.js",
+          "bindly.js",
+          "discord/discord.js"
+        ],
+        "css": [
+          "discord/discord.css",
+          "three-dots-white.min.css"
+        ],
+        "run_at": "document_start"
       }
   ],
     "permissions": [
-      "*://checkout.ticketmaster.com/*", "*://*.ticketmaster.com/checkout/*", "*://checkout.livenation.com/*", "*://checkout.ticketmaster.ca/*", "*://*.ticketmaster.ca/checkout/*",
+      "*://checkout.ticketmaster.com/*", "*://*.ticketmaster.com/checkout/*", "*://checkout.livenation.com/*", "*://checkout.ticketmaster.ca/*", "*://*.ticketmaster.ca/checkout/*",  "https://discord.com/*",
       "storage",
       "tabs",
       "activeTab"
